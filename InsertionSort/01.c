@@ -3,7 +3,7 @@ I#include <stdio.h>
 void insertionSort(int vetor[], int n);
 
 int main() {
-    int tam = 5;
+    int tam = 25;
     int vetor[tam];
     int i;
 
