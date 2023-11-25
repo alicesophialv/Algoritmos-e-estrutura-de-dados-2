@@ -34,9 +34,10 @@ void insertionSort(int vetor[], int n) {
 	
     for (i = 1; i < n; i++) {
     	int j = i;
-    	
+    	int aux;
+	    
     	while (j > 0 && vetor[j] < vetor[j-1]) {
-    		int aux = vetor[j];
+    		aux = vetor[j];
     		vetor[j] = vetor[j - 1];
     		vetor[j-1] = aux;
     		j-=1;
