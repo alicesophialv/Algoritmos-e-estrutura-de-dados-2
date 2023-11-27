@@ -39,6 +39,7 @@ int main() {
     for (i = 0; i < tam; i++) {
         printf("%d ", vetorInsertion[i]);
     }
+    
     printf("\nContador de trocas Insert Sort: %d", contadorIS);
 	printf("\n");
 	//BUBBLE SORT
@@ -54,8 +55,9 @@ int main() {
     return 0;
 }
 int insertionSort(int vetor[], int n) {
-	int i, cont=0, aux;
+	int i, cont=0, aux, z;
 	
+    printf("\nTrocas realizadas IS:\n");
     for (i = 1; i < n; i++) {
     	int j = i;
     	
@@ -66,6 +68,12 @@ int insertionSort(int vetor[], int n) {
     		j-=1;
     		cont+=1;
     		
+    		for (z = 0; z < 5; z++) {
+ 					printf("%4d", vetor[z]);				
+			}
+					
+				printf("\n");
+    		
 		}
 	}
 	
@@ -73,19 +81,26 @@ int insertionSort(int vetor[], int n) {
 }
 
 int bubbleSort(int vetor[], int n) {
-	int k, j, aux, cont=0;
+	int k, j, aux, cont=0, z;
 	
+	printf("\nTrocas realizadas BS:\n");
 	for (k = 1; k < n; k++) {
 		for(j = 0; j < n - 1; j++) {
 			if (vetor[j] > vetor[j + 1]) {
 				aux = vetor[j];
 				vetor[j] = vetor[j + 1];
 				vetor[j + 1] = aux;
-				cont+=1;				
+				cont+=1;
+				
+				for (z = 0; z < 5; z++) {
+ 					printf("%4d", vetor[z]);				
 			}
+					
+				printf("\n");
 			
 		}
 	}
+}
 	
 	return cont;
 }
